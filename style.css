@@ -1,0 +1,338 @@
+/* VARIABLES DE DISEÑO */
+:root {
+    --fondo-base: #F8FFF4;      /* Crema suave */
+    --primario-lavanda: #BDB3D2; /* Morado Primario */
+    --secundario-gris: #9AA2B1;  /* Gris de apoyo */
+    --acento-amarillo: #FAFAC6;  /* Amarillo de acento */
+    --texto-negro: #1A1A1A;      /* Negro suave para lectura */
+    --blanco-puro: #FFFFFF;
+    --fuente-inter: 'Inter', sans-serif;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    max-height: 88px; 
+    width: auto;      
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-inter);
+    background-color: var(--fondo-base);
+    color: var(--texto-negro);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* NAVEGACIÓN */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primario-lavanda);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-negro);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primario-lavanda);
+}
+
+/* HERO SECTION */
+.hero-layout {
+    display: flex;
+    align-items: center; /* Centra el texto y la imagen verticalmente */
+    justify-content: space-between;
+    gap: 50px; /* Espacio entre el texto y la imagen */
+    padding: 80px 0;
+    text-align: left; /* Alineamos el texto a la izquierda */
+}
+
+/* Cajas flexibles para que tomen mitad y mitad */
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centra la imagen en su lado derecho */
+}
+
+/* Control de la imagen */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Opcional: bordes redondeados si es una foto */
+}
+
+/* AJUSTES DE TEXTO PARA ESTE FORMATO */
+.hero-desc {
+    margin: 0 0 30px 0; /* Quitamos el margen automático que lo centraba */
+    font-size: 1.1rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: flex-start; /* Alineamos las estadísticas a la izquierda */
+    gap: 40px;
+}
+
+/* -------------------------------------- */
+/* ANIMACIÓN ZOOM IN (Igual a Animate.css)*/
+/* -------------------------------------- */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-zoom-in {
+    animation: zoomIn 1s ease-out forwards;
+}
+
+/* -------------------------------------- */
+/* RESPONSIVIDAD (Celulares)              */
+/* -------------------------------------- */
+@media (max-width: 768px) {
+    .hero-layout {
+        flex-direction: column-reverse; /* Pone la imagen arriba y el texto abajo en celular */
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .stats {
+        justify-content: center; /* Centra las estadísticas en celular */
+    }
+}
+.hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    background-color: var(--secundario-gris);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--blanco-puro);
+}
+
+.initials {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blanco-puro);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.role {
+    font-size: 1.5rem;
+    color: var(--primario-lavanda);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-desc {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    font-size: 0.9rem;
+    color: var(--secundario-gris);
+}
+
+.stat-item strong {
+    font-size: 1.5rem;
+    color: var(--texto-negro);
+}
+
+/* PROYECTOS */
+.section-title {
+    font-size: 2rem;
+    margin: 60px 0 40px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--blanco-puro);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    height: 220px;
+    background: linear-gradient(135deg, var(--primario-lavanda), var(--secundario-gris));
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag-yellow {
+    background-color: var(--acento-amarillo);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tag-lavender {
+    background-color: #E8DFF5; /* Un lila muy suave */
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.view-project {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primario-lavanda);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* CONTACTO */
+.contact-section {
+    background-color: #f1f1f1; /* Un gris muy suave para separar */
+    padding: 80px 0;
+    margin-top: 80px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+}
+
+.btn-submit {
+    background-color: var(--primario-lavanda);
+    color: var(--texto-negro); /* Como acordamos: Lavanda con texto oscuro */
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: var(--secundario-gris);
+}
+
+/* MEDIA QUERIES (RESPONSIVIDAD) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats {
+        gap: 20px;
+    }
+}
