@@ -22,6 +22,78 @@
     display: block;
 }
 
+.social-icons i {
+    font-size: 1.2rem; /* Tamaño del icono */
+    color: var(--secundario-gris); /* Tu #9AA2B1 */
+}
+
+.social-icons a:hover i {
+    color: var(--primario-lavanda); /* Cambia de color al pasar el mouse */
+}
+
+/* NAVBAR: Alineación de los 3 grupos */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* ACCIONES (Iconos + Botón) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre iconos y botón */
+}
+
+/* ICONOS SOCIALES */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--secundario-gris); /* El color #9AA2B1 */
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f0f0f0;
+}
+
+.social-icons img {
+    width: 20px;
+    height: auto;
+}
+
+/* BOTÓN CONTACTAR */
+.btn-contact {
+    background-color: var(--primario-lavanda); /* Tu #BDB3D2 */
+    color: var(--blanco-puro);
+    padding: 10px 25px;
+    border-radius: 30px; /* Bordes bien redondeados como tu imagen */
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #afa3c7; /* Un lavanda un pelín más oscuro */
+    transform: scale(1.05);
+}
+
+/* RESPONSIVO: Ocultar iconos en móvil para que no se amontone */
+@media (max-width: 992px) {
+    .nav-actions {
+        display: none; /* O puedes moverlos a un menú hamburguesa */
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -206,22 +278,96 @@ h1 {
     color: var(--texto-negro);
 }
 
+/* --- SECCIÓN HABILIDADES --- */
+.skills-section {
+    padding: 80px 0;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.skills-column {
+    flex: 1; /* Hace que ambas columnas midan lo mismo */
+}
+
+/* Títulos con la rayita de color al lado */
+.column-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* La rayita vertical de color */
+.column-title::before {
+    content: "";
+    width: 6px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.ux-title::before { background-color: var(--secundario-gris); } /* El gris #9AA2B1 */
+.front-title::before { background-color: var(--primario-lavanda); } /* El lavanda #BDB3D2 */
+
+/* Contenedor de las pastillas */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que las etiquetas salten de línea si no caben */
+    gap: 12px;
+}
+
+/* Estilo de la Pastilla (Tag) */
+.skill-tag {
+    background-color: var(--blanco-puro);
+    border: 1px solid #E0E0E0; /* Un borde gris muy suave */
+    padding: 10px 24px;
+    border-radius: 50px; /* Bordes totalmente redondeados */
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--texto-negro);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Efecto al pasar el mouse */
+.skill-tag:hover {
+    border-color: var(--primario-lavanda);
+    color: var(--primario-lavanda);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* --- RESPONSIVIDAD (Móvil) --- */
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column; /* Se apilan una arriba de la otra */
+        gap: 40px;
+    }
+}
+
 /* PROYECTOS */
 .section-title {
-    font-size: 2rem;
-    margin: 60px 0 40px;
+    font-size: 2.5rem;
+    margin: 80px 0 50px;
     text-align: center;
+    font-weight: 700;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    gap: 40px;
 }
 
 .project-card {
     background-color: var(--blanco-puro);
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
     transition: transform 0.3s;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
@@ -229,16 +375,31 @@ h1 {
 
 .project-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(189, 179, 210, 0.2);
 }
 
 .card-image {
-    height: 220px;
+    height: 240px;
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     background: linear-gradient(135deg, var(--primario-lavanda), var(--secundario-gris));
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
 }
 
 .card-body {
     padding: 25px;
 }
+
 
 .tags {
     display: flex;
@@ -273,7 +434,7 @@ h1 {
 
 /* CONTACTO */
 .contact-section {
-    background-color: #f1f1f1; /* Un gris muy suave para separar */
+    background-color:#E8DFF5; /* Un gris muy suave para separar */
     padding: 80px 0;
     margin-top: 80px;
 }
@@ -317,7 +478,8 @@ h1 {
     text-align: center;
     padding: 40px;
     font-size: 0.8rem;
-    color: var(--secundario-gris);
+    color: var(--texto-negro);
+    background-color: var(--secundario-gris);
 }
 
 /* MEDIA QUERIES (RESPONSIVIDAD) */

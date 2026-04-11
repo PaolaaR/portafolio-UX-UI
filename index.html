@@ -7,21 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav class="navbar container">
-          <a href="#" class="logo">
-            <img src="Assets/imagenes/logo1.jpeg" alt="Logo Paola - Diseño UX/UI" class="logo-img">
+       <nav class="navbar container">
+        <a href="#" class="logo">
+            <img src="Assets/imagenes/logo1.jpeg" alt="Logo Paola" class="logo-img">
         </a>
-            <ul class="nav-links">
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Hablemos</a></li>
-            </ul>
-        </nav>
+
+        <ul class="nav-links">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+        </ul>
+
+     <div class="social-icons">
+    <a href="mailto:p.riveranovoa@gmail.com"><i class="bi bi-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/priveran"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/PaolaaR/"><i class="bi bi-github"></i></a>
+</div>
+            <a href="#contacto" class="btn-contact">Contactar</a>
+        </div>
+    </nav>
     </header>
 
     <main>
@@ -31,13 +41,10 @@
         <h1>Paola Rivera</h1>
         <p class="role">Diseñadora UX/UI</p>
         <p class="hero-desc">
-            Soy una diseñadora UX/UI apasionada por crear experiencias digitales amigables y atractivas. 
-            Mi enfoque combina la estética visual con la funcionalidad para resolver problemas reales de los usuarios.
+            Diseñadora UX/UI con base en Pedagogía y Traducción. 
+            Mi experiencia en Customer Success me permite traducir las necesidades del negocio en soluciones digitales centradas en el ser humano. 
+            Combino la claridad comunicativa con el diseño visual para crear interfaces que no solo se ven bien, sino que educan y guían al usuario de forma intuitiva.
         </p>
-        <div class="stats">
-            <div class="stat-item"><strong>25+</strong><br>Proyectos</div>
-            <div class="stat-item"><strong>2 Años</strong><br>Experiencia</div>
-        </div>
     </div>
 
     <div class="hero-image animate-zoom-in">
@@ -45,48 +52,127 @@
     </div>
 
 </section>
+<section id="habilidades" class="skills-section container">
+    <h2 class="section-title">Habilidades & Herramientas</h2>
+    
+    <div class="skills-grid">
+        <div class="skills-column">
+            <h3 class="column-title ux-title">Diseño UX/UI</h3>
+            <div class="tags-container">
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Adobe XD</span>
+                <span class="skill-tag">Sketch</span>
+                <span class="skill-tag">Illustrator</span>
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">InVision</span>
+                <span class="skill-tag">Prototyping</span>
+                <span class="skill-tag">Wireframing</span>
+            </div>
+        </div>
+
+        <div class="skills-column">
+            <h3 class="column-title front-title">Desarrollo Frontend</h3>
+            <div class="tags-container">
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Responsive Design</span>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="proyectos" class="container">
             <h2 class="section-title">Proyectos Destacados</h2>
             <div class="projects-grid">
                 <article class="project-card">
-                    <div class="card-image project-1"></div>
+                    <div class="card-image"><img src="Assets/imagenes/bancoestado.jpeg"</div>project-2"></div>
                     <div class="card-body">
                         <div class="tags">
-                            <span class="tag-yellow">Figma</span>
-                            <span class="tag-lavender">App</span>
+                            <span class="tag-yellow">User Persona</span>
+                            <span class="tag-lavender">Benchmark</span>
                         </div>
                         <h3>UXplorer: Explorando la Experiencia de Usuario</h3>
                         <p>Estudio de experiencia de usuario de la App Banco Estado.</p>
-                        <a href="#" class="view-project">Ver proyecto en Figma</a>
+                         <a href="Assets/PDF/UX Research - App BancoEstado.pdf" class="view-project"><i class="bi bi-file-earmark-pdf"></i> Ver Análisis de Caso(PDF)</a>
                     </div>
                 </article>
 
                 <article class="project-card">
-                    <div class="card-image project-2"></div>
+                    <div class="card-image"><img src="Assets/imagenes/ux4all.png"</div>project-2"></div>
                     <div class="card-body">
                         <div class="tags">
-                            <span class="tag-yellow">Web</span>
-                            <span class="tag-lavender">E-commerce</span>
+                            <span class="tag-yellow">Accesibilidad</span>
+                            <span class="tag-lavender">DCU</span>
                         </div>
                         <h3>Plataforma UX4ALL</h3>
                         <p>Diseño de una solución digital educativa centrada en el usuario</p>
-                        <a href="#" class="view-project">Ver proyecto en Figma</a>
+                         <a href="Assets/PDF/Proyecto 3 UX4ALL.pdf" class="view-project"><i class="bi bi-file-earmark-pdf"></i> Ver Análisis de Caso(PDF)</a>
                     </div>
                 </article>
 
                 <article class="project-card">
-                    <div class="card-image project-3"></div>
+                    <div class="card-image"><img src="Assets/imagenes/proyecto4.jpeg"</div>project-2"></div>
                     <div class="card-body">
                         <div class="tags">
-                            <span class="tag-yellow">UI</span>
-                            <span class="tag-lavender">Dashboard</span>
+                            <span class="tag-yellow">UX</span>
+                            <span class="tag-lavender">AI</span>
                         </div>
-                        <h3>Dashboard Analítico</h3>
-                        <p>Visualización de datos complejos mediante una interfaz intuitiva y accesible.</p>
-                        <a href="#" class="view-project">Ver proyecto en Figma</a>
+                        <h3>Rediseño de Plataforma Educativa</h3>
+                        <p>Diseño de una nueva arquitectura de la información para la plataforma educativa, aplicando buenas prácticas de organización, 
+                            etiquetado, navegación y búsqueda.</p>
+                         <a href="Assets/PDF/proyecto_modulo4_grupo1.pdf" class="view-project"><i class="bi bi-file-earmark-pdf"></i> Ver Análisis de Caso(PDF)</a>
                     </div>
                 </article>
+
+                    <article class="project-card">
+                    <div class="card-image"><img src="Assets/imagenes/cards.jpeg"></div>
+                    <div class="card-body">
+                        <div class="tags">
+                            <span class="tag-yellow">UX/UI</span>
+                            <span class="tag-lavender">Figma</span>
+                        </div>
+                        <h3>Interfaz UX/UI para App de Cursos Online</h3>
+                        <p>solución centrada en el usuario, usable, coherente, accesible y escalable, tanto en móvil como en escritorio, aplicando reglas de usabilidad, 
+                            diseño de interacciones claras, testeo con usuarios y generación de un guideline completo basado en Atomic Design.</p>
+                         <a href="Assets/PDF/proyecto_modulo5_grupo1.pdf" class="view-project"><i class="bi bi-file-earmark-pdf"></i> Ver Análisis de Caso(PDF)</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image"><img src="Assets/imagenes/saludconecta.png"</div>project-2"></div>
+                    <div class="card-body">
+                        <div class="tags">
+                            <span class="tag-yellow">Usabilidad</span>
+                            <span class="tag-lavender">DCU</span>
+                        </div>
+                        <h3>Análisis de Caso Reglas de Usabilidad y Jerarquía Visual Jakob Nielsen</h3>
+                        <p>Auditoría de usabilidad y rediseeño de partes clave de la  interfaz. 
+                            Para ello se evalúa el sitio web utilizando los principios heurísticos de Jakob Nielsen y los elementos de jerarquía visual.</p>
+                        <a href="Assets/PDF/Caso_SaludConecta_PRivera.pdf" class="view-project"><i class="bi bi-file-earmark-pdf"></i> Ver Análisis de Caso(PDF)</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+    <div class="card-image">
+        <img src="Assets/imagenes/eduplus.png" alt="Vista previa Análisis de AI">
+    </div>
+    
+    <div class="card-body">
+        <div class="tags">
+            <span class="tag-yellow">AI</span>
+            <span class="tag-lavender">UX Research</span>
+        </div>
+        <h3>Análisis de Caso: Métodos y Herramientas</h3>
+        <p>Rediseño de la Arquitectura de la Información (AI) mediante inventario de contenidos y análisis de usuarios para optimizar la navegación.</p>
+        
+        <a href="Assets/PDF/Caso_Eduplus_ RiveraP.pdf" target="_blank" class="view-project">
+            <i class="bi bi-file-earmark-pdf"></i> Ver Análisis de Caso (PDF)
+        </a>
+    </div>
+</article>
             </div>
         </section>
 
@@ -105,9 +191,8 @@
                 <div class="contact-info">
                     <p>También puedes encontrarme en:</p>
                     <div class="social-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Behance</a>
-                        <a href="#">Dribbble</a>
+                        <a href="https://www.linkedin.com/in/priveran">LinkedIn</a>
+                        <a href="https://github.com/PaolaaR/">GitHub</a>
                     </div>
                 </div>
             </div>
