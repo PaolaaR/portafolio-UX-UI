@@ -278,6 +278,224 @@ h1 {
     color: var(--texto-negro);
 }
 
+/* =========================================
+   NUEVA SECCIÓN: CASO DE ESTUDIO DETALLADO
+   ========================================= */
+
+.portfolio-section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--texto-negro);
+}
+
+.section-heading p {
+    color: var(--secundario-gris);
+    font-size: 1rem;
+}
+
+/* LA TARJETA PRINCIPAL (Con el efecto flotante e imagen recortada) */
+.case-study-card {
+    background: var(--blanco-puro);
+    border-radius: 24px; 
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden; /* Esto asegura que la foto respete las esquinas redondas */
+    border: none;
+    margin: 0 auto;
+}
+
+/* Contenedor de la Imagen Superior */
+.case-study-image-container {
+    width: 100%;
+    max-height: 450px; 
+    padding: 0;
+    margin: 0;
+    background-color: rgba(189, 179, 210, 0.1); 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    overflow: hidden;
+}
+
+.case-study-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; 
+    object-position: top center;
+}
+
+/* Detalles de la tarjeta */
+.case-study-details {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.detail-group p {
+    color: var(--texto-negro);
+    opacity: 0.85;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.group-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--texto-negro);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Grillas Internas */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.info-box {
+    background-color: #F9F9F9;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(154, 162, 177, 0.2); /* Usa tu gris secundario transparente */
+}
+
+.info-box.full-width {
+    width: 100%;
+}
+
+.box-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--texto-negro);
+}
+
+.info-box p {
+    color: var(--texto-negro);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Listas de Aprendizaje */
+.learning-list {
+    padding-left: 1.2rem;
+    color: var(--texto-negro);
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+
+.learning-list li {
+    margin-bottom: 0.6rem;
+}
+
+/* Métricas */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.metric-card {
+    border: 1px solid rgba(154, 162, 177, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metric-value {
+    font-size: 2rem;
+    color: var(--secundario-gris);
+    font-weight: 300;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--texto-negro);
+    opacity: 0.7;
+}
+
+/* Etiquetas (Tags) */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tag {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.gray-tags .tag {
+    background-color: var(--blanco-puro);
+    border: 1px solid var(--secundario-gris);
+    color: var(--secundario-gris);
+}
+
+.yellow-tags .tag {
+    background-color: var(--acento-amarillo);
+    border: 1px solid #EBEB9B; /* Un amarillo un poco más oscuro para el borde */
+    color: var(--texto-negro);
+}
+
+.frame-proyecto {
+    background-color: var(--blanco-puro);
+    border-radius: 48px; /* Radio amplio para el toque moderno */
+    
+    /* Sombra con un toque de tu lavanda para que se vea integrado */
+    box-shadow: 0 30px 70px rgba(189, 179, 210, 0.25), 
+                0 10px 20px rgba(0, 0, 0, 0.05);
+    
+    padding: 80px 60px; /* Mucho espacio interno */
+    margin: 60px auto;  /* Espacio exterior para que NO se corte la sombra */
+    max-width: 100%;
+    border: 1px solid rgba(189, 179, 210, 0.15); /* Borde sutil */
+    transition: transform 0.4s ease;
+}
+
+/* Evita que elementos internos rompan la curvatura */
+.frame-proyecto {
+    overflow: visible; /* ¡Importante! Permitir que la sombra se vea */
+}
+
+@media (max-width: 768px) {
+    .frame-proyecto {
+        padding: 40px 20px;
+        border-radius: 32px;
+        margin: 30px 10px;
+    }
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .case-study-details {
+        padding: 1.5rem;
+    }
+    
+    .grid-2-col, .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* --- SECCIÓN HABILIDADES --- */
 .skills-section {
     padding: 80px 0;
